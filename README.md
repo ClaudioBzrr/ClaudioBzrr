@@ -17,4 +17,4 @@
 </div>
   
   
-  ![snake gif](https://github.com/YOUR_USERNAME/ClaudioBzrr/blob/output/github-contribution-grid-snake.gif)
+  ![snake gif](https://github.com/ClaudioBzrr/ClaudioBzrr/blob/output/github-contribution-grid-snake.gif)
