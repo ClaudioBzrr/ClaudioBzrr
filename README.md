@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/ClaudioBzrr">
-  <img height="284em" src="https://github-readme-streak-stats.herokuapp.com?user=claudiobzrr&background=1A1C26&sideNums=39BFA7&dates=39BFA7&sideLabels=39BFA7&ring=BB94F2&fire=BB94F2&currStreakLabel=BB94F2&stroke=BB94F2&border=BB94F2&currStreakNum=BB94F2"/>
+  <img height="283em" src="https://github-readme-streak-stats.herokuapp.com?user=claudiobzrr&background=1A1C26&sideNums=39BFA7&dates=39BFA7&sideLabels=39BFA7&ring=BB94F2&fire=BB94F2&currStreakLabel=BB94F2&stroke=BB94F2&border=BB94F2&currStreakNum=BB94F2"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ClaudioBzrr&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ClaudioBzrr&layout=compact&langs_count=7&theme=tokyonight"/>
 </div>
