@@ -7,7 +7,7 @@
  
 ##
   
-<div style="display: flex";flex-direction: row;justify-content:center;align-items:center"><br>
+<div style="display: flex"><br>
   <img align="center" alt="Claudio-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="Claudio-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
   <img align="center" alt="Claudio-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
