@@ -1,54 +1,37 @@
-
-# GitHub Action for generating a contribution graph with a snake eating your contributions.
-
 name: Generate Snake
-
-# Controls when the action will run. This action runs every 6 hours.
 
 on:
   schedule:
-      # every 6 hours
-    - cron: "0 */6 * * *"
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:        # manual trigger from the Actions tab
 
-# This command allows us to run the Action automatically from the Actions tab.
-  workflow_dispatch:
+# Required so the workflow can update the `output` branch (default GITHUB_TOKEN is read-only unless this is set).
+permissions:
+  contents: write
 
-# The sequence of runs in this workflow:
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Check out the repo so the generated assets land in the workspace for the publish step.
+      - uses: actions/checkout@v5
 
-    # Checks repo under $GITHUB_WORKSHOP, so your job can access it
-      - uses: actions/checkout@v2
-
-    # Generates the snake  
-      - uses: Platane/snk@master
-        id: snake-gif
+      # Generate the contribution snake (light SVG, dark SVG, animated GIF) from the contribution graph.
+      - name: Generate the snake
+        uses: Platane/snk@v3
         with:
-          github_user_name: ClaudioBzrr
-          # these next 2 lines generate the files on a branch called "output". This keeps the main branch from cluttering up.
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ github.token }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
-     # show the status of the build. Makes it easier for debugging (if there's any issues).
-      - run: git status
-
-      # Push the changes
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      # Publish the generated assets to the `output` branch (force-pushes by default, keeping `main` clean).
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-          force: true
-
-      - uses: crazy-max/ghaction-github-pages@v2.1.3
-        with:
-          # the output branch we mentioned above
           target_branch: output
           build_dir: dist
         env:
