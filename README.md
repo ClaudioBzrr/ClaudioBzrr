@@ -31,10 +31,10 @@ Check the **repositories tab** to see what I've been working on — that's where
 
 - Improving my full-stack projects
 - Deepening my knowledge in React, TypeScript, and PostgreSQL
-- Open to junior developer roles, freelance projects, and collaborations
+- Open to freelance projects and collaborations
 
 ## 📫 Let's connect
 
 - GitHub: https://github.com/ClaudioBzrr
 
-If you're hiring or have an interesting project, feel free to reach out. I'm always happy to talk about code and opportunities.
+If you have an interesting project, feel free to reach out. I'm always happy to talk about code and opportunities.
